@@ -1,6 +1,7 @@
 import streamlit as st
-import pandas as pd
-import plotly.express as px
-st.title("Working")
-st.success("deployment successful")
-st.write("Ok")
+st.write("Streamlit OK")
+try:
+    import plotly
+    st.success(f"Plotly Installed: {plotly.__version__}")
+except Exception as e:
+    st.error(f"Plotly Installed: {e}")
